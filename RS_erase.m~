@@ -1,0 +1,10 @@
+% erasing 'time' variable in structures
+
+for i = 1:12
+    
+load (['RestingState_ec' num2str(i) '.mat'])
+rsEEGec = rsEEGec.Channels;
+
+save (['RS' num2str(i) '_no_time'], 'rsEEGec')
+end
+
